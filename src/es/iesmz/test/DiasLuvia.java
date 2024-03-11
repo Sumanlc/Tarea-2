@@ -27,11 +27,21 @@ public class DiasLuvia {
 
     }
 
-    /*public int contarDiasLluviosos(){
+    public int contarDiasLluviosos(){
+        int cont = 0;
+        for(boolean[] mes : diasLluviosos){
+            for (boolean dia : mes){
+                if(dia){
+                    cont++;
+                }
+            }
+        }
+        System.out.println("Se han registrado " + cont + " días de lluvia");
+        return cont;
 
     }
 
-    public int trimestreLluvioso(){
+    /*public int trimestreLluvioso(){
 
     }
 
