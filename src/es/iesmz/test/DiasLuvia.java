@@ -23,8 +23,6 @@ public class DiasLuvia {
             return false;
         }
         return diasLluviosos [mes - 1] [dia - 1];
-
-
     }
 
     public int contarDiasLluviosos(){
@@ -38,14 +36,31 @@ public class DiasLuvia {
         }
         System.out.println("Se han registrado " + cont + " días de lluvia");
         return cont;
-
     }
 
-    /*public int trimestreLluvioso(){
+    public int trimestreLluvioso(){
+        int[] trimestres = new int[4];
 
+        for (int i = 0; i < 12; i++) {
+            int trimestre = (i / 3) + 1;
+            if (diasLluviosos[i][0]) {
+                trimestres[trimestre - 1]++;
+            }
+        }
+
+        int maximo = trimestres[0];
+        int trimestreMaximo = 1;
+        for (int i = 1; i < 4; i++) {
+            if (trimestres[i] > maximo) {
+                maximo = trimestres[i];
+                trimestreMaximo = i + 1;
+            }
+        }
+        System.out.println("El trimestre con más días de lluvia es el " + trimestreMaximo);
+        return trimestreMaximo;
     }
 
-    public int primerDiaLluvia(){
+    /*public int primerDiaLluvia(){
 
     }*/
 
