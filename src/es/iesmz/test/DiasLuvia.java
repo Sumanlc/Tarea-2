@@ -60,8 +60,15 @@ public class DiasLuvia {
         return trimestreMaximo;
     }
 
-    /*public int primerDiaLluvia(){
-
-    }*/
+    public int primerDiaLluvia(){
+        for (int mes = 0; mes < 12; mes++) {
+            for (int dia = 0; dia < 31; dia++) {
+                if (diasLluviosos[mes][dia]) {
+                    return dia + 1;
+                }
+            }
+        }
+        return -1;
+    }
 
 }
